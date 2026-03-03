@@ -1,0 +1,36 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+
+  text-align: center;
+
+
+ 
+}
+
+.chart {
+  max-width: 50%;
+  height: auto;
+  border: 2px solid #2a9df4;
+  border-radius: 8px;
+  margin: 10px auto;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #2a9df4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}

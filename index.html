@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COVID-19 Hospitalization EDA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>COVID-19 Monthly Hospitalization Analysis</h1>
+  </header>
+
+
+  <!-- Summary Statistics & Visualizations -->
+  <section id="statistics">
+    <h2>Summary Statistics & Visualizations</h2>
+
+      <img src="sum1.png" alt="Monthly Rate Distribution" class="chart">
+      <img src="sum2.png" alt="Monthly Rate Distribution" class="chart">
+      <img src="sum3.png" alt="Monthly Rate Distribution" class="chart">
+      <img src="sum4.png" alt="Monthly Rate Distribution" class="chart">
+      <img src="sum5.png" alt="Monthly Rate Distribution" class="chart">
+
+
+
+    <!-- Quantitative -->
+    <div class="chart-container">
+      <h3>Distribution of Monthly Hospitalization Rates</h3>
+      <img src="rate_distribution.png" alt="Monthly Rate Distribution" class="chart">
+      <p>This histogram shows how hospitalization rates are distributed across all months and states. The distribution is highly right-skewed due to Omicron-era peaks.</p>
+    </div>
+
+    <div class="chart-container">
+      <h3>Hospitalization Rates Over Time</h3>
+      <img src="rate_over_time.png" alt="Rate Over Time" class="chart">
+      <p>Monthly hospitalization rates plotted over time, illustrating pandemic waves and the dramatic Omicron surge in 2021–22.</p>
+    </div>
+
+    <!-- Ordinal -->
+    <div class="chart-container">
+      <h3>Hospitalization Rates by Age Group</h3>
+      <img src="rate_by_age.png" alt="Rate by Age Group" class="chart">
+      <p>Boxplot showing the distribution of hospitalization rates across age groups. Older adults show substantially higher and more variable rates.</p>
+    </div>
+
+    <div class="chart-container">
+      <h3>Hospitalization Rates by Season</h3>
+      <img src="season_distribution.png" alt="Season Distribution" class="chart">
+      <p>Rates broken down by respiratory season, revealing that 2021–22 (Omicron) was a clear outlier relative to all other seasons.</p>
+    </div>
+
+    <!-- Categorical -->
+    <div class="chart-container">
+      <h3>Distribution of Records by Race</h3>
+      <img src="race_distribution.png" alt="Race Distribution" class="chart">
+      <p>Bar chart showing record counts by racial/ethnic group after removing the aggregate "All" category.</p>
+    </div>
+
+    <div class="chart-container">
+      <h3>Distribution of Records by State</h3>
+      <img src="state_distribution.png" alt="State Distribution" class="chart">
+      <p>Record counts across the 16 surveillance states, showing roughly balanced coverage.</p>
+    </div>
+
+    <!-- Relationship visualizations -->
+    <div class="chart-container">
+      <h3>Age Distribution of Records</h3>
+      <img src="age_distribution.png" alt="Age Distribution" class="chart">
+      <p>Frequency of records across the 11 non-overlapping age groups after cleaning.</p>
+    </div>
+
+    <div class="chart-container">
+      <h3>Hospitalization Rate by State</h3>
+      <img src="rate_by_state.png" alt="Rate by State" class="chart">
+      <p>Comparing average hospitalization rates across states reveals geographic variation.</p>
+    </div>
+
+    <div class="chart-container">
+      <h3>Year Distribution</h3>
+      <img src="year_distribution.png" alt="Year Distribution" class="chart">
+      <p>Record counts per year confirm coverage across all seasons from 2019 through 2026.</p>
+    </div>
+
+  </section>
+
+  <!-- Hypotheses & Insights -->
+  <section id="hypotheses">
+    <h2>Hypotheses & Insights</h2>
+    <ul>
+      <li><strong>H1:</strong> Older adults have significantly higher COVID-19 hospitalization rates than younger age groups.
+The rate_by_age boxplot (which you have but didn't upload here) likely shows this, and it's strongly supported by existing literature. The age distribution chart confirms balanced representation across groups, so any rate differences are real, not an artifact of sample size.</li>
+      <li><strong>H2:</strong> Hospitalization rates peaked in 2021–22 and have declined in subsequent seasons.
+Your season_distribution chart shows 2020–21 and 2021–22 had the most records, and year_distribution shows 2021 was the highest year. The rate histogram shows extreme right-skew driven by those peak years. This suggests a testable trend of declining severity over time.</li>
+      <li><strong>H3:</strong> Geographic variation in hospitalization rates reflects differences in surveillance intensity rather than true disease burden.
+Your state_distribution chart shows Iowa, North Carolina, and Washington have dramatically fewer records than other states (~1,200, ~750, and ~200 vs. ~3,200 for most others). Yet the rate_by_state boxplot shows those same states have comparable or even higher median rates. This mismatch suggests reporting volume ≠ actual burden — a testable and interesting finding. </li>
+    </ul>
+    <button id="hypothesisBtn">Change Hypotheses Color</button>
+  </section>
+
+  <script src="index.js"></script>
+</body>
+</html>
