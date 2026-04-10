@@ -25,6 +25,30 @@ section {
   border-radius: 8px;
   margin: 10px auto;
 }
+.chart-container:hover {
+  background-color: #e3f2fd;
+  transition: background-color 0.3s ease;
+}
+table {
+  border-collapse: collapse;
+  margin: 10px auto 30px auto;
+  width: 70%;
+}
+
+th, td {
+  border: 1px solid #2a9df4;
+  padding: 8px 16px;
+  text-align: center;
+}
+
+th {
+  background-color: #2a9df4;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f0f8ff;
+}
 
 button {
   padding: 10px 20px;
@@ -33,4 +57,11 @@ button {
   border: none;
   border-radius: 8px;
   cursor: pointer;
+}
+
+#data-synopsis {
+  text-align: left;
+}
+#hypotheses {
+  text-align: left;
 }
